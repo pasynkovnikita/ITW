@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en" >
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pasynkov Nikita</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">  
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="http://code.jquery.com/jquery-1.10.2.js"></script>  
+        <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>  
+    </head>
+    <body>
+        <header id="header">
+            <div id="menu">
+                <div class="header-menu">
+                    <h3><a href="https://www.stud.fit.vutbr.cz/~xpasyn00/itw2/index.html">xpasyn00</a></h3>
+                    <ul>
+                        <li><a href="#about-me">about</a></li>
+                        <li><a href="#projects">projects</a></li>
+                        <li><a href="#contact">contact</a></li>
+                    </ul>
+                </div>
+            </div>
+                <h1>Welcome to my page</h1>
+        </header>
+        <main>
+            <div class="about-me" id="about-me">
+            <div class="container">
+                <h2>About me</h2>
+                <div class="about-wrapper">
+                    <div class="about-text">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus tenetur magni, ipsum libero id vitae rerum delectus quam accusamus obcaecati accusantium itaque nisi neque dolorum inventore qui quibusdam, officiis sunt iure. Quae debitis ex soluta assumenda corporis laboriosam, minus, temporibus magnam ea necessitatibus inventore dignissimos, accusamus quam. Voluptatibus, odit rerum?</p>
+                    </div>
+                    <div class="about-pic">
+                        <img loading="lazy" src="./about_me_pic.jpg">
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="projects" id="projects">
+                <div class="container">
+                    <div class="project-text">
+                        <h2>My projects</h2>
+                    </div>
+                    <div class="project-cards">
+                        <div class="card" id="card-1">
+                            <img loading="lazy" src="./card-1.jpg">
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum, molestias ad. Voluptatem corrupti repellat, dolores quidem distinctio, repellendus consequuntur iure iusto, blanditiis numquam saepe alias. Repudiandae, ex impedit adipisci suscipit recusandae itaque veniam, ipsa porro quia quisquam, ducimus fugit? Recusandae illum esse temporibus molestias sapiente mollitia cumque rerum officiis sequi!</p>
+                        </div>
+                        <div class="card" id="card-2">
+                            <img loading="lazy" src="./card-2.jpg">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum sint sed soluta vitae vero deserunt maxime officia repudiandae tenetur sunt. Deserunt iste at minima quasi odio dolore nulla. Sequi esse tenetur quia ratione dicta numquam saepe beatae enim illo quidem. Dolorem nesciunt possimus quo nemo modi inventore a vitae aliquam.</p>
+                        </div>
+                        <div class="card" id="card-3">
+                            <img loading="lazy" src="./card-3.jpg">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat quisquam, delectus, maxime, aut cumque voluptatem veniam unde magnam dolores architecto rerum vero sed sapiente voluptates dignissimos asperiores consequuntur id eveniet quod quidem quo accusantium? Perferendis odit ipsam, distinctio reiciendis exercitationem eveniet doloremque quos saepe molestiae corporis vero ratione aliquam laborum!</p>
+                        </div>
+                        <div class="card" id="card-4">
+                            <img loading="lazy" src="./card-4.jpg">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod incidunt harum magni officiis, vitae aspernatur placeat commodi! Nisi excepturi nobis quasi nesciunt tenetur culpa animi, ullam officia, autem modi unde esse facere, totam velit consequatur debitis? Unde, ratione eos? Harum necessitatibus aperiam quam? Molestiae eaque quasi exercitationem nesciunt! Quasi, quibusdam.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact" id="contact">
+                <div class="container">
+                    <h2>Contact me</h2>
+                    <div class="contact-form">
+                        <div class="name">
+                            <label for="name">name</label>
+                            <input type="text" id="name" class="required">
+                        </div>
+                        <div class="email">
+                            <label for="email">email</label>
+                            <input type="text" id="email" class="required">
+                        </div>
+                        <div class="message">
+                            <label for="message">message</label>
+                            <textarea rows="12" type="text" id="message" class="required"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <script>
+            window.onscroll = function() {
+                stick_navbar();
+                animate_cards();
+            };
+            
+            var navbar = document.getElementById("menu");
+            var sticky = navbar.offsetTop;
+            
+            function stick_navbar() {
+              if (window.pageYOffset > 0) {
+                navbar.classList.add("sticky")
+              } else {
+                navbar.classList.remove("sticky");
+              }
+            }
+
+            function animate_cards() {
+                $(".card").each(function(i, card) {
+                    if($(this).hasClass("animated")) return;
+
+                    const windowDownPercentage = window.pageYOffset + window.innerHeight * 0.7;
+                    
+                    if(windowDownPercentage > $(this).offset().top) {
+                        $(this).addClass("animated");
+                        $(this).find("img").addClass(i % 2 === 0 ? "anim-alide-left" : "anim-alide-right");
+                        $(this).find("p").addClass(i % 2 === 1 ? "anim-alide-right" : "anim-alide-left");
+                    }
+                }); 
+            }
+
+            $(".header-menu ul li a").click(function(e) {
+                e.preventDefault();
+                const link = $(this).attr("href"); 
+                
+                $([document.documentElement, document.body]).animate({
+                    scrollTop: $(link).offset().top
+                }, 1000);
+            });
+
+        </script>
+
+    </body>
+
+    <footer>
+        <div class="container">      
+            <div class="contacts">
+                <div class="copyright">
+                    <p>© Nikita Pasynkov 2022. All rights reserved.</p>
+                </div>
+                <div class="links">
+                    <ul>
+                        <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><i class="fa-brands fa-facebook" id="facebook"></i></a></li>
+                        <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><i class="fa-brands fa-twitter" id="twitter"></i></a></li>
+                        <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><i class="fa-brands fa-github" id="github"></i></a></li>
+                        <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><i class="fa-brands fa-instagram" id="instagram"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    
+
+</html>
